@@ -26,6 +26,7 @@
         <service id="Doctrine\Bundle\DoctrineSkeletonMapperBundle\ObjectRepositoryFactory" autowire="false">
             <argument type="service" id="Doctrine\SkeletonMapper\ObjectManager" />
             <argument type="service" id="Doctrine\SkeletonMapper\ObjectFactory" />
+            <argument type="service" id="Doctrine\SkeletonMapper\ObjectRepository\ObjectRepositoryFactory" />
             <argument type="service" id="Doctrine\Common\EventManager" />
         </service>
 
