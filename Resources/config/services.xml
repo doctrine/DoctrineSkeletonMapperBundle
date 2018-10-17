@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="Doctrine\Common\EventManager" autowire="false" />
+
+        <service id="Doctrine\SkeletonMapper\Mapping\ClassMetadataInstantiator" autowire="false" />
+
+        <service id="Doctrine\SkeletonMapper\Mapping\ClassMetadataFactory" autowire="false">
+            <argument type="service" id="Doctrine\SkeletonMapper\Mapping\ClassMetadataInstantiator" />
+        </service>
+
+        <service id="Doctrine\SkeletonMapper\ObjectFactory" autowire="false" />
+
+        <service id="Doctrine\SkeletonMapper\ObjectIdentityMap" autowire="false">
+            <argument type="service" id="Doctrine\SkeletonMapper\ObjectRepository\ObjectRepositoryFactory" />
+            <argument type="service" id="Doctrine\SkeletonMapper\Mapping\ClassMetadataFactory" />
+        </service>
+
+        <service id="Doctrine\SkeletonMapper\Persister\ObjectPersisterFactory" autowire="false" />
+
+        <service id="Doctrine\SkeletonMapper\ObjectRepository\ObjectRepositoryFactory" autowire="false" />
+
+        <service id="App\DoctrineSkeletonMapperBundle\ObjectRepositoryFactory" autowire="false">
+            <argument type="service" id="Doctrine\SkeletonMapper\ObjectManager" />
+            <argument type="service" id="Doctrine\SkeletonMapper\ObjectFactory" />
+            <argument type="service" id="Doctrine\Common\EventManager" />
+        </service>
+
+        <service id="Doctrine\SkeletonMapper\ObjectManager" autowire="false" public="true">
+            <argument type="service" id="Doctrine\SkeletonMapper\ObjectRepository\ObjectRepositoryFactory" />
+            <argument type="service" id="Doctrine\SkeletonMapper\Persister\ObjectPersisterFactory" />
+            <argument type="service" id="Doctrine\SkeletonMapper\ObjectIdentityMap" />
+            <argument type="service" id="Doctrine\SkeletonMapper\Mapping\ClassMetadataFactory" />
+            <argument type="service" id="Doctrine\Common\EventManager" />
+        </service>
+    </services>
+</container>
