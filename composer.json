@@ -1,7 +1,7 @@
 {
     "name": "doctrine/doctrine-skeleton-mapper-bundle",
     "description": "Symfony DoctrineSkeletonMapperBundle",
-    "type": "project",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
