@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f193471c5ee556c4da57eba1401e4c78",
+    "content-hash": "de567945affdaad13aa8ebcebdfb52e1",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -703,7 +703,7 @@
         },
         {
             "name": "doctrine/skeleton-mapper",
-            "version": "dev-master",
+            "version": "0.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/skeleton-mapper.git",
@@ -3781,9 +3781,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "doctrine/skeleton-mapper": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

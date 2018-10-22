@@ -12,7 +12,7 @@
     ],
     "require": {
         "php": "^7.1",
-        "doctrine/skeleton-mapper": "dev-master",
+        "doctrine/skeleton-mapper": "^0.0.1",
         "symfony/config": "^4.1",
         "symfony/dependency-injection": "^4.1"
     },
